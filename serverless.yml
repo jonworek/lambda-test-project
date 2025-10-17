@@ -1,0 +1,28 @@
+service: my-lambda-project
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: us-east-2
+  profile: jonworek
+
+plugins:
+  - serverless-offline
+
+functions:
+  hello:
+    handler: src/index.handler
+    events:
+      - httpApi:
+          path: /hello
+          method: get
+
+build:
+  esbuild:
+    bundle: true
+    minify: false
+    sourcemap: true
+
+custom:
+  serverless-offline:
+    httpPort: 7000

@@ -1,0 +1,25 @@
+{
+  "name": "my-lambda-project",
+  "version": "1.0.0",
+  "description": "A simple AWS Lambda project that returns 'Hello, World!'",
+  "scripts": {
+    "start": "serverless offline",
+    "deploy": "serverless deploy",
+    "invoke:local": "serverless invoke local -f hello",
+    "test": "echo 'No tests specified'"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1000.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.156",
+    "@types/node": "^24.8.1",
+    "esbuild": "^0.25.11",
+    "serverless": "^4.21.1",
+    "serverless-esbuild": "^1.55.1",
+    "serverless-offline": "^14.4.0",
+    "typescript": "^5.9.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
